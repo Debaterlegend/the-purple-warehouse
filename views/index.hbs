@@ -367,6 +367,7 @@
       </div>
     </div>
     <footer class="footer">
+      <button id="darkModeToggle">Toggle Dark Mode</button>
       <div class="footer-content center-relative">
         <div class="footer-logo">
           <img src="/img/landing/logo-circle.png"/>
@@ -385,6 +386,17 @@
         </div>
       </div>
     </footer>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('darkModeToggle');
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    }
+  });
+    </script>
+
   </div>
   <script src="/js/jquery.js"></script>
   <script src="/js/jquery.sticky.js"></script>

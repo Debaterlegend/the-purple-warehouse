@@ -4,7 +4,7 @@
     --primaryBackgroundColor: #7d4090;
     --primaryContentColor: #f4f4f4;
     --primaryDarkerBackgroundColor: #5d2e6c;
-    --primaryDarkerBackgroundColor2: #6c377d;
+    --primaryDarkerBackgroundColor2: #6C378E;
     --disabledColor: #747474;
     --outline-img: "";
     --filled-img: "";
@@ -14,7 +14,48 @@
     --option-bg: white;
     --select-bg: rgba(255, 255, 255, 0.2);
     --cgray: rgba(45, 45, 45, 0.68);
+    --clr-dark: #333;
+    --clr-light: #fff;
 }
+
+body.dark-mode {
+    background: #111;
+    color: #fefefe;
+}
+
+body.dark-mode h1 {
+    color: white;
+}
+
+body.dark-mode a {
+    color: #80d0ff;
+}
+
+body.dark-mode input, body.dark-mode button, body.dark-mode select {
+    background-color: #222;
+    color:  #fefefe;
+    border: 1 px solid #444;
+}
+
+body.dark-mode .start {
+    background-color: #6c377d;
+    color: #fff;
+    border-color: #000;
+    fill: initial; /* for SVG icons */
+}
+
+body.dark-mode input {
+    background-color: transparent; 
+    color: #fefefe;                
+    border: none;                  
+    border-bottom: 1px solid white; 
+}
+
+body.dark-mode select option{
+  background-color: #111;
+  color: #fefefe;
+}
+
 
 * {
     font-family: sans-serif;
@@ -75,12 +116,18 @@ main {
 }
 
 .login-window > .title-block > h1,
-.home-window > .title-block > h1 {
+.home-window > .title-block > .dark-mode > h1 {
     color: var(--contentColor);
     font-size: 2rem;
     margin: 0;
     width: 100%;
 }
+
+
+body.dark-mode h1 {
+    color: #fefefe
+}
+
 
 .login-window > .title-block > h3,
 .home-window > .title-block > h3 {
@@ -389,14 +436,14 @@ button.clear {
     font-size: 1.5rem;
 }
 
-.home-window > .footer-text,
-.home-window > .footer-text a {
+.home-window > body.dark-mode > .footer-text,
+.home-window > body.dark-mode > .footer-text a {
     color: var(--contentColor);
     text-align: center;
     font-size: 0.9rem;
 }
 
-.home-window > .boltman-quote {
+.home-window > body.dark-mode > .boltman-quote {
     color: var(--contentColor);
     text-align: center;
     font-size: 1rem;
@@ -2880,4 +2927,22 @@ div.preset {
     .shop-container {
         padding: 10px;
     }
+}
+#darkModeToggle {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#darkModeToggle:hover {
+  background-color: #333;
+  color: #fff;
+}
+body.dark-mode h1 {
+    color: #fefefe;
 }
